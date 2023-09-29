@@ -1,0 +1,6 @@
+com/example/idealTestProject/task/Task.class
+com/example/idealTestProject/task/TaskController.class
+com/example/idealTestProject/task/TaskService.class
+com/example/idealTestProject/task/TaskConfig.class
+com/example/idealTestProject/IdealTestProjectApplication.class
+com/example/idealTestProject/task/TaskRepository.class
