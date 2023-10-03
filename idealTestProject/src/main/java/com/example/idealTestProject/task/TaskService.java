@@ -30,6 +30,12 @@ public class TaskService {
                 taskRepository.findTaskById(task.getId());
         if(studentOptional.isPresent()){
             throw new IllegalStateException("id taken");
+        }else{
+            task.setTitle(task.getTitle());
+            task.setDescription(task.getDescription());
+            task.setCompleted(task.getCompleted());
+            task.setCreateDate(task.getCreateDate());
+            task.setCompletedDate(task.getCompletedDate());
         }
         taskRepository.save(task);
         System.out.println(task);
