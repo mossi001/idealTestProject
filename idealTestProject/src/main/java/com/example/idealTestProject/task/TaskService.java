@@ -26,9 +26,9 @@ public class TaskService {
     }
 
     public void addNewTask(Task task){
-        Optional<Task> studentOptional =
+        Optional<Task> taskOptional =
                 taskRepository.findTaskById(task.getId());
-        if(studentOptional.isPresent()){
+        if(taskOptional.isPresent()){
             throw new IllegalStateException("id taken");
         }else{
             task.setTitle(task.getTitle());
@@ -69,7 +69,7 @@ public class TaskService {
         if (description != null &&
                 description.length() > 0 &&
                 !Objects.equals(task.getDescription(), description)) {
-            Optional<Task> studentOptional = taskRepository.findTaskById(taskId);
+            Optional<Task> taskOptional = taskRepository.findTaskById(taskId);
             if (studentOptional.isPresent()){
                 throw new IllegalStateException("id taken");
 
